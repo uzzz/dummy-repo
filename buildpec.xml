@@ -1,0 +1,17 @@
+version: 0.1
+
+environment_variables:
+  plaintext:
+    RAILS_ENV: test
+    SECRET_KEY_BASE: not-important
+
+phases:
+  build:
+    commands:
+      - echo Build started on `date`
+  post_build:
+    commands:
+      - echo Build finished on `date`
+artifacts:
+  files:
+    - "**/*"
